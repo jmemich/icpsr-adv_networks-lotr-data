@@ -34,3 +34,6 @@ for(i in unique_names)  {
 
 # remove any lines in edgelist without ties
 edgelist <- edgelist[edgelist$edge == 1, ]
+
+# write data
+write.csv(edgelist, "C:/Users/Jamie/Documents/GitHub/icpsr-adv_networks-lotr-data/edgelist.csv", row.names = FALSE)
