@@ -19,8 +19,6 @@ for(i in unique_names)  {
 
 		line_number <- grep(paste(i, "and", ii), raw_data)
 
-		if(length(line_number) == 0) {cat(print("fuckup here:", line_number))}
-
 		# if any of the next 3 lines (1 line for each book) ends in '1' then the two character meet
 		if(any(grepl("[1-9]$", raw_data[c(line_number + 1, line_number + 2, line_number + 3)]))) {
 
