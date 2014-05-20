@@ -23,15 +23,12 @@ for(i in unique_names)  {
 		if(any(grepl("[1-9]$", raw_data[c(line_number + 1, line_number + 2, line_number + 3)]))) {
 
 			edgelist$edge[edgelist[, 1] == i & edgelist[, 2] == ii] <- 1
-		
+			
 		}
 
 	}
 
 }
-
-# remove any lines in edgelist without ties
-edgelist <- edgelist[edgelist$edge == 1, ]
 
 # write data
 write.csv(edgelist, "C:/Users/Jamie/Documents/GitHub/icpsr-adv_networks-lotr-data/edgelist.csv", row.names = FALSE)
