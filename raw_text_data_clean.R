@@ -2,7 +2,7 @@
 ## for ICPSR adv. network analysis class
 
 # get text file with raw data
-raw_data <- readLines("C:/Users/Jamie/Documents/GitHub/icpsr-adv_networks-lotr-data/luke_hilliman-raw_lotr_data.txt") 
+raw_data <- readLines("http://dl.dropboxusercontent.com/u/9678048/sna/output.txt") 
 
 # unique names
 unique_names <- unlist(unique(lapply(strsplit(grep("^[^0-9]", raw_data, value = TRUE), " and "), function(X) unique(X[[1]]))))
